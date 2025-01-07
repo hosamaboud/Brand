@@ -6,7 +6,7 @@ const CategoryCard = ({ img, title }) => {
       data-aos="fade-up"
       className="group mt-20 flex flex-col h-[180px] w-[150px] justify-center items-center gap-3"
     >
-      <Link to="/">
+      <Link to="/products">
         <img
           className=" h-[120px] w-[120px] rounded-full group-hover:scale-110 duration-500 object-cover"
           src={img}
