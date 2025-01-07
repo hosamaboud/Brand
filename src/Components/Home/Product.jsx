@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 const CategoryCard = ({ data }) => {
   return (
     <div
@@ -6,7 +8,9 @@ const CategoryCard = ({ data }) => {
     >
       <div data-aos="fade-right" className="flex flex-col gap-4 justify-center">
         <span className="text-sm">{data.discount}</span>
-        <h1 className="lg:text-7xl text-4xl font-extrabold lg:w-[300px]">{data.title}</h1>
+        <h1 className="lg:text-7xl text-4xl font-extrabold lg:w-[300px]">
+          {data.title}
+        </h1>
         <span className="text-sm">{data.date}</span>
       </div>
       <div data-aos="zoom-in">
@@ -21,9 +25,12 @@ const CategoryCard = ({ data }) => {
         <span className="text-sm  text-center  w-[300px]">
           {data.description}
         </span>
-        <button className="text-white bg-black px-4 py-2 rounded-md">
+        <Link
+          to={"/products"}
+          className="text-white bg-black px-4 py-2 rounded-md"
+        >
           Shop Now
-        </button>
+        </Link>
       </div>
     </div>
   );

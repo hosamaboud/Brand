@@ -3,7 +3,7 @@ import img1 from "../../assets/hero/sale.png";
 import img2 from "../../assets/hero/shopping.png";
 import img3 from "../../assets/hero/women.png";
 import Slider from "react-slick";
-import { ArrowBigLeft, ArrowBigRightDashIcon } from "lucide-react";
+import {  ArrowBigRightDashIcon } from "lucide-react";
 
 const heroImage = [
   {
