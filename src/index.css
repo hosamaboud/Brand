@@ -1,0 +1,133 @@
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Roboto:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* LIGHT THEME VARIABLES */
+:root {
+  --c-border: #c2c2c4;
+  --c-border-hover: #000;
+  --c-divider: #fff;
+  --c-gutter: #e2e2e3;
+  --c-bg: #ffffff;
+  --c-bg-alt: #f6f6f7;
+  --c-bg-elv: #ffffff;
+  --c-bg-soft: #f6f6f7;
+  --c-gray-soft: rgba(142, 150, 170, 0.14);
+  --c-scrollbar-thumb: #c2c2c4;
+  --c-scrollbar-thumb-hover: #000;
+  --c-scrollbar-bg: #e2e2e3;
+  /* text color */
+  --c-text-1: #000;
+  --c-text-2: hsl(207, 4%, 28%);
+  --c-text-3: hsl(207, 4%, 56%);
+  --cv-primary: #fea928;
+  --cv-violet: rgb(237 233 254);
+  --cv-green: rgb(126 211 33);
+  --cv-orange: rgb(254 169 40);
+  --cv-yellow: rgb(255 255 0);
+  --cv-bg-testimonial: rgb(300, 200, 200);
+  --cv-bg-item: #fea928;
+  --cv-bg-Policy: #ffe2e2;
+  --cv-bg-productItem: #ffe3e3;
+  --c-shadow-soft: 0 4px 12px hsl(207, 24%, 35%, 0.15);
+}
+
+/* DARK THEME VARIABLES */
+
+body.dark-theme {
+  --c-border: #525866;
+  --c-border-hover: #1b4242;
+  --c-divider: #2e2e32;
+  --c-gutter: #000000;
+  --c-text-1: #fff;
+  --c-text-2: #edf0f7;
+  --c-text-3: #a8b3cf;
+  --c-gray-soft: rgba(242, 250, 300, 0.6);
+  --c-bg: rgb(17 24 39);
+  --c-bg-alt: #000;
+  --c-bg-elv: #202127;
+  --c-bg-soft: #202127;
+  --c-scrollbar-thumb: #3c3f44;
+  --c-scrollbar-thumb-hover: #243642;
+  --c-scrollbar-bg: #000;
+  --cv-primary: #ed8900;
+  --cv-violet: rgb(167 139 250);
+  --cv-green: rgb(46 139 46);
+  --cv-orange: rgb(254 120 40);
+  --cv-yellow: rgb(255 205 0);
+  --cv-bg-testimonial: #000;
+  --cv-bg-item: #000;
+  --cv-bg-Policy: #243642;
+  --cv-bg-productItem: #387478;
+  --c-shadow-soft: 0 0 15px rgba(0, 255, 255, 0.8);
+}
+
+/* BASE STYLES */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.938rem;
+  background-color: var(--c-bg);
+  color: var(--c-text-1);
+  transition: background-color 0.5s, color 0.5s;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Lora", serif;
+  font-weight: 500; /* font-medium */
+  color: var(--c-text-1);
+}
+
+a {
+  text-decoration: none;
+  color: var(--c-scrollbar-bg);
+  transition: color 0.3s ease;
+}
+
+/* UTILITY CLASSES */
+.hoverEffect {
+  @apply duration-300 transition-all ease-out cursor-pointer hover:scale-105 hover:border-border_hover;
+}
+
+/* SCROLLBAR STYLING */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--c-scrollbar-thumb);
+  border-radius: 2.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--c-scrollbar-thumb-hover);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--c-scrollbar-bg);
+}
+
+#btn_theme:hover {
+  transform: rotate(-90deg);
+  transition: ease-in-out 0.5s;
+}
+a.active p {
+  background-color: var(--cv-bg-item);
+  border-radius: 5px;
+  padding: 5px;
+  color: var(--c-text-1);
+}
