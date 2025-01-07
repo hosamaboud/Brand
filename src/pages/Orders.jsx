@@ -3,22 +3,35 @@ import { ShopContext } from "../Context/ShopContext";
 import { assets } from "../assets/assets";
 
 const Orders = () => {
-  const { wear, cartItems } = useContext(ShopContext);
+  const { wear, cartItems, orders } = useContext(ShopContext);
   const [cartData, setCartData] = useState([]);
   const [previewImg, setPreviewImg] = useState(null);
   useEffect(() => {
     let tempData = [];
-    for (const items in cartItems) {
-      for (const item in cartItems[items]) {
-        tempData.push({
-          id: items,
-          size: item,
-          quantity: cartItems[items][item],
-        });
+
+    if (orders.length > 0) {
+      tempData = orders.flatMap((order) =>
+        Object.keys(order.items).map((size) => ({
+          id: order.id,
+          size,
+          quantity: order.items[size],
+          date: order.date,
+        }))
+      );
+    } else {
+      for (const items in cartItems) {
+        for (const item in cartItems[items]) {
+          tempData.push({
+            id: items,
+            size: item,
+            quantity: cartItems[items][item],
+          });
+        }
       }
     }
+
     setCartData(tempData);
-  }, [wear, cartItems]);
+  }, [orders, cartItems]);
   return (
     <div>
       {previewImg && (

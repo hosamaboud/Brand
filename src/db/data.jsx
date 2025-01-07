@@ -54,6 +54,8 @@ import p_img49 from "../assets/p_img49.png";
 import p_img50 from "../assets/p_img50.png";
 import p_img51 from "../assets/p_img51.png";
 import p_img52 from "../assets/p_img52.png";
+import p_img53 from "../assets/headphone.png";
+import p_img54 from "../assets/smartwatch2-removebg-preview.png";
 
 export const wear = [
   {
@@ -76,10 +78,10 @@ export const wear = [
       "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
     price: 200,
     image: p_img2,
-    smallImage: [ p_img2_1, p_img2_2, p_img2_3, p_img2_4],
+    smallImage: [p_img2_1, p_img2_2, p_img2_3, p_img2_4],
     category: "Men",
     subCategory: "Topwear",
-    sizes:["S","M","L","Xl","XXl",],
+    sizes: ["S", "M", "L", "Xl", "XXl"],
     date: 1716621345448,
     bestseller: true,
   },
@@ -118,7 +120,7 @@ export const wear = [
     image: p_img5,
     category: "Women",
     subCategory: "Topwear",
-    sizes:["S","M","L","Xl","XXl",],
+    sizes: ["S", "M", "L", "Xl", "XXl"],
     date: 1716622345448,
     bestseller: true,
   },
@@ -131,7 +133,7 @@ export const wear = [
     image: p_img6,
     category: "Kids",
     subCategory: "Topwear",
-    sizes: ["S","M", "L", "XL"  ,"XXL"],
+    sizes: ["S", "M", "L", "XL", "XXL"],
     date: 1716623423448,
     bestseller: true,
   },
@@ -144,7 +146,7 @@ export const wear = [
     image: p_img7,
     category: "Men",
     subCategory: "Bottomwear",
-    sizes: ["S", "M","L", "XL","XXL"],
+    sizes: ["S", "M", "L", "XL", "XXL"],
     date: 1716621542448,
     bestseller: false,
   },
@@ -170,7 +172,7 @@ export const wear = [
     image: [p_img9],
     category: "Kids",
     subCategory: "Topwear",
-    sizes:["S","M","L","Xl","XXl"],
+    sizes: ["S", "M", "L", "Xl", "XXl"],
     date: 1716621235448,
     bestseller: false,
   },
@@ -730,6 +732,32 @@ export const wear = [
     category: "Men",
     subCategory: "Winterwear",
     sizes: ["S", "M", "L", "XL"],
+    date: 1716668445448,
+    bestseller: false,
+  },
+  {
+    id: "73",
+    name: "smartwatch2",
+    description:
+      "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
+    price: 350,
+    image: [p_img54],
+    category: "Men",
+    subCategory: "Winterwear",
+    sizes: ["red", "blue", "green"],
+    date: 1716668445448,
+    bestseller: false,
+  },
+  {
+    id: "74",
+    name: "Headphone pro 2",
+    description:
+      "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
+    price: 150,
+    image: [p_img53],
+    category: "Men",
+    subCategory: "Headphone",
+    sizes: ["red", "blue", "green", "black"],
     date: 1716668445448,
     bestseller: false,
   },

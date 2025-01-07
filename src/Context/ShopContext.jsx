@@ -28,7 +28,6 @@ const ShopContextProvider = (props) => {
 
     if (cartData[itemId]) {
       if (cartData[itemId][size]) {
-       
         cartData[itemId][size] += 1;
       } else {
         cartData[itemId][size] = 1;
@@ -39,7 +38,7 @@ const ShopContextProvider = (props) => {
     }
 
     setCartItems(cartData);
-     toast.success("Item added in cart");
+    toast.success("Item added in cart");
   };
 
   const getCartCount = () => {
@@ -88,6 +87,26 @@ const ShopContextProvider = (props) => {
     }
     return totalAmount;
   };
+  const [orders, setOrders] = useState([]);
+
+  const placeOrder = () => {
+    setOrders((prevOrders) => [
+      ...prevOrders,
+      ...Object.keys(cartItems).map((id) => ({
+        id,
+        items: cartItems[id],
+        date: new Date(),
+      })),
+    ]);
+    setCartItems([]);
+  };
+  const getOrderCount = () => {
+    return orders.reduce((total, order) => {
+      return (
+        total + Object.values(order.items).reduce((sum, qty) => sum + qty, 0)
+      );
+    }, 0);
+  };
 
   const value = {
     delivery_Fee,
@@ -98,6 +117,9 @@ const ShopContextProvider = (props) => {
     updateQuantity,
     navigate,
     getCartAmount,
+    placeOrder,
+    orders,
+    getOrderCount,
   };
 
   return (

@@ -7,7 +7,8 @@ import TotalCart from "../../Components/Cart/CartTotal";
 const Cart = () => {
   const [previewImg, setPreviewImg] = useState(null);
   const [cartData, setCartData] = useState([]);
-  const { wear, cartItems, updateQuantity, navigate } = useContext(ShopContext);
+  const { placeOrder,wear, cartItems, updateQuantity, navigate } =
+    useContext(ShopContext);
 
   useEffect(() => {
     let tempData = [];
@@ -140,7 +141,10 @@ const Cart = () => {
             </div>
             <div className="w-full text-end">
               <button
-                onClick={() => navigate("/place-order")}
+                onClick={() => {
+                  placeOrder();
+                  navigate("/orders"); 
+                }}
                 className=" bg-primary  py-3 my-8 px-8 rounded-md"
               >
                 Proceed to Checkout

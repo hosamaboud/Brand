@@ -37,14 +37,14 @@ const navLink = [
   { id: 1, name: "Home", link: "/" },
   { id: 2, name: "Shop", link: "/products" },
   { id: 3, name: "About", link: "/about" },
-  { id: 3, name: "Contact", link: "/contact" },
+  { id: 4, name: "Contact", link: "/contact" },
 ];
 
 const Navbar = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [visible, setVisible] = useState(false);
   const { user, isLoaded } = useUser();
-  const { getCartCount } = useContext(ShopContext);
+  const { getCartCount, getOrderCount } = useContext(ShopContext);
   // Toggle dark mode
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
@@ -149,7 +149,7 @@ const Navbar = () => {
                       <ShoppingCart className="w-6 h-6 " />
                     </p>
                     <span className=" inline-flex items-center justify-center absolute top-[-8px] right-[-5px] bg-bg_item text-sm font-bold text-white px-1 rounded-full">
-                      {getCartCount()}
+                      {getOrderCount()}
                     </span>
                   </NavLink>
                   <Link>

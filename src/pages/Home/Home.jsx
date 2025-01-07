@@ -10,6 +10,7 @@ import Smartphone from "../../assets/smartwatch2-removebg-preview.png";
 import Categories from "../../Components/Categories/Categories";
 import LATEST from "../../Components/Home/LATEST ";
 const Data_Card = {
+  id: 74,
   discount: "30% OFF",
   title: "Winter Sale",
   date: "10 Jan to 28 Jan",
@@ -20,6 +21,7 @@ const Data_Card = {
   description: "lorem ipsum dolor sit amet consectetur adipisicing elit.",
 };
 const Data_Card1 = {
+  id: 73,
   discount: "50% OFF",
   title: "Summer Sale",
   date: "15 Feb to 25 Feb",
@@ -40,7 +42,6 @@ const Home = () => {
       <TopProducts />
       <Banner />
       <CategoryCard data={Data_Card1} />
-
       <Testimonials />
     </>
   );

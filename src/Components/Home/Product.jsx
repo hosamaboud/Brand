@@ -26,7 +26,7 @@ const CategoryCard = ({ data }) => {
           {data.description}
         </span>
         <Link
-          to={"/products"}
+          to={`/products/${data.id}`}
           className="text-white bg-black px-4 py-2 rounded-md"
         >
           Shop Now
